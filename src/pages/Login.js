@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../css/login.css';
 import PropTypes from 'prop-types';
-import backgroundImage from '../imgs/backgroundLogin.png'
+import backgroundImage from '../imgs/backgroundLogin.png';
 import { addEmail } from '../redux/actions';
 
 class Login extends React.Component {
@@ -44,7 +44,7 @@ class Login extends React.Component {
     const { email, password, isDisabled } = this.state;
     return (
       <>
-      <img src={backgroundImage} alt='Moedas' className="backgroundImage"/>
+        <img src={ backgroundImage } alt="Moedas" className="backgroundImage" />
         <div className="inputsLogin">
           <p className="textTrybe">Trybe </p>
           <p className="textWallet">Wallet</p>
@@ -78,7 +78,6 @@ class Login extends React.Component {
             Entrar
 
           </button>
-          
         </div>
       </>
     );
