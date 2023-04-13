@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import '../css/login.css';
 import PropTypes from 'prop-types';
-import backgroundLogin from '../imgs/backgroundLogin.mp4';
+import backgroundImage from '../imgs/backgroundLogin.png'
 import { addEmail } from '../redux/actions';
 
 class Login extends React.Component {
@@ -44,15 +44,13 @@ class Login extends React.Component {
     const { email, password, isDisabled } = this.state;
     return (
       <>
-        <video className="videoTag" autoPlay loop muted>
-          <source src={ backgroundLogin } type="video/mp4" />
-        </video>
-        <div id="inputsLogin">
-          <p id="textTrybe">Trybe</p>
-          <p id="textWallet">Wallet</p>
+      <img src={backgroundImage} alt='Moedas' className="backgroundImage"/>
+        <div className="inputsLogin">
+          <p className="textTrybe">Trybe </p>
+          <p className="textWallet">Wallet</p>
           <label htmlFor="email-input">
             <input
-              id="email-input"
+              className="email-input"
               placeholder="Email"
               type="text"
               data-testid="email-input"
@@ -63,7 +61,7 @@ class Login extends React.Component {
           </label>
           <label htmlFor="password-input">
             <input
-              id="password-input"
+              className="password-input"
               placeholder="Senha"
               type="password"
               data-testid="password-input"
@@ -73,13 +71,14 @@ class Login extends React.Component {
             />
           </label>
           <button
-            id="button-enter"
+            className="button-enter"
             onClick={ this.submitButton }
             disabled={ isDisabled }
           >
             Entrar
 
           </button>
+          
         </div>
       </>
     );

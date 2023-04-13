@@ -1,80 +1,86 @@
-*{
-    margin: 0px;
-}
-.videoTag{
-	position: fixed; 
-	min-width: 100%; 
-	min-height: 100%; 
-	width: 1352.05px;
-    height: 965.39px;
-	z-index: -1000;
-    left: -5.05px;
-    top: -147.39px;
-} 
-
-#inputsLogin{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
 }
 
-#textTrybe{
-    position: absolute;
-    width: 85.88px;
-    height: 33.79px;
-    left: 500px;
-    top: 180px;
-    font-size: 50px;
-    font-weight: 100;
+body {
+  background-color: #b8d4d2;
 }
 
-#textWallet{
-    position: absolute;
-    width: 112.15px;
-    height: 26.76px;
-    left: 628px;
-    top: 180px;
-    color: #7560D5;
-    font-weight: bold;
-    font-size: 50px; 
+.backgroundImage {
+  height: 578px;
+  left: 50px;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 60%;
+  position: fixed;
+  top: center;
+  width: 965px;
+  z-index: -1000px;
+
 }
 
-#email-input{
-    box-sizing: border-box;
-    position: absolute;
-    width: 330px;
-    height: 40px;
-    left: 475px;
-    top: 260px;
-    background: #FFFFFF;
-    border: 1px solid #7560D5;
-    border-radius: 5px;
+.inputsLogin {
+  background: white;
+  border-radius: 10px;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  height: 356px;
+  left: 377px;
+  position: absolute;
+  top: 100px;
+  width: 525px;
 }
 
-#password-input{
-    box-sizing: border-box;
-    position: absolute;
-    width: 330px;
-    height: 40px;
-    left: 475px;
-    top: 310px;
-    background: #FFFFFF;
-    border: 1px solid #7560D5;
-    border-radius: 5px;
+.textTrybe {
+  font-size: 50px;
+  font-weight: 100;
+  height: 356px;
+  left: 100px;
+  position: absolute;
+  top: 20px;
+  width: 525px;
 }
 
-#button-enter {
-    box-sizing: border-box;
-    position: absolute;
-    width: 250px;
-    height: 40px;
-    left: 515px;
-    top: 370px;
-    background: #E1F2F1;
-    border: 1px solid #E1F2F1;
-    border-radius: 5px;
-    font-weight: bold;
+.textWallet {
+  color: #7560d5;
+  font-size: 50px;
+  font-weight: 700;
+  height: 26.76px;
+  left: 228px;
+  position: absolute;
+  top: 20px;
+  width: 112.15px;
+}
+
+.email-input , .password-input {
+  background: white;
+  border: 1px solid #7560d5;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  width: 330px;
+}
+
+.email-input {
+  height: 40px;
+  left: 100px;
+  top: 125px;
+}
+
+.password-input {
+  height: 40px;
+  left: 100px;
+  top: 175px;
+}
+
+.button-enter {
+  background: #e1f2f1;
+  border: 1px solid #e1f2f1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-weight: 700;
+  height: 40px;
+  left: 140px;
+  position: absolute;
+  top: 250px;
+  width: 250px;
 }
