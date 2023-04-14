@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import '../css/login.css';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import backgroundImage from '../imgs/backgroundLogin.png';
 import { addEmail } from '../redux/actions';
@@ -20,7 +20,7 @@ class Login extends React.Component {
     this.setState({
       [name]: value,
     }, () => this.validation());
-    console.log(name);
+    console.log(value);
   };
 
   validation = () => {
@@ -30,12 +30,12 @@ class Login extends React.Component {
       return this.setState({ isDisabled: false });
     }
     this.setState({ isDisabled: true });
-    console.log(password.length);
   };
 
   submitButton = () => {
     const { history, dispatch } = this.props;
     const { email } = this.state;
+    console.log(email);
     dispatch(addEmail(email));
     history.push('/carteira');
   };
@@ -76,16 +76,13 @@ class Login extends React.Component {
             disabled={ isDisabled }
           >
             Entrar
-
           </button>
+
         </div>
       </>
     );
   }
 }
-const mapStateToProps = (state) => ({
-  email: state.email,
-});
 
 Login.propTypes = {
   dispatch: PropTypes.func.isRequired,
@@ -94,4 +91,4 @@ Login.propTypes = {
   }).isRequired,
 };
 
-export default connect(mapStateToProps)(Login);
+export default connect()(Login);
