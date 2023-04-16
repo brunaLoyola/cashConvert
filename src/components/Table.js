@@ -1,11 +1,17 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+// import { connect } from 'react-redux';
 
-class Table extends Component {
-  render() {
-    return (
-      <div>Table</div>
-    );
-  }
-}
+// class Table extends Component {
+//   render() {
+//     return (
+//       <div>Table</div>
+//     );
+//   }
+// }
+// const mapStateToProps = (state) => ({
+// });
 
-export default Table;
+// Table.propTypes = {
+// };
+// export default connect(mapStateToProps)(Table);

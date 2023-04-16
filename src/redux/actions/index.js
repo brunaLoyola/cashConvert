@@ -1,11 +1,3 @@
-const ADD_EMAIL = 'ADD_EMAIL';
-
-const addEmail = (email) => ({
-  type: ADD_EMAIL,
-  email,
-});
-
-export {
-  ADD_EMAIL,
-  addEmail,
-};
+export const ADD_EMAIL = 'ADD_EMAIL';
+export const ADD_CURRENCIES = 'ADD_CURRENCIES';
+export const SOLICIT = 'SOLICIT';
