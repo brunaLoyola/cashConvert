@@ -8,23 +8,20 @@ class Header extends Component {
 
     const total = expenses.reduce((acc, index) => {
       const subTotal = index.exchangeRates[index.currency].ask * index.value;
-      return ((acc) + subTotal);
+      return acc + subTotal;
     }, 0.00);
 
     return (
-      <div>
+      <div className="header">
         <p data-testid="email-field" className="email-field">{email}</p>
         <p data-testid="total-field" className="total-field">
-          { total.toFixed(2) }
+          {total.toFixed(2)}
         </p>
         <p
           data-testid="header-currency-field"
           className="header-currency-field"
         >
-          {' '}
           BRL
-          {' '}
-
         </p>
       </div>
     );

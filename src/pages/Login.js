@@ -43,8 +43,8 @@ class Login extends React.Component {
     const { email, password, isDisabled } = this.state;
     return (
       <div className="inputsLogin">
-        <p className="textTrybe">Trybe </p>
-        <p className="textWallet">Wallet</p>
+        <p className="textTrybe">Cash </p>
+        <p className="textWallet">Convert</p>
         <label htmlFor="email-input">
           <input
             className="email-input"

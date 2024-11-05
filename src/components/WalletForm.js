@@ -32,13 +32,15 @@ class WalletForm extends Component {
     const { dispatch, expenses } = this.props;
     const { value, description, currency, method, tag } = this.state;
     const exchangeRates = await fetchEconomia();
-    const expensesArray = { id: expenses.length,
+    const expensesArray = {
+      id: expenses.length,
       value,
       currency,
       method,
       tag,
       description,
-      exchangeRates };
+      exchangeRates,
+    };
 
     dispatch(addExpenses(expensesArray));
     this.setState({
@@ -54,7 +56,7 @@ class WalletForm extends Component {
     const { currencies } = this.props;
     const { value, description, currency, method, tag } = this.state;
     return (
-      <div>
+      <div className="wallet-form">
         <label htmlFor="value-input">
           Valor:
           <input
@@ -75,43 +77,47 @@ class WalletForm extends Component {
             onChange={ this.onInputChange }
           />
         </label>
-        <select
-          value={ currency }
-          data-testid="currency-input"
-          name="currency"
-          onChange={ this.onInputChange }
-        >
+        <label htmlFor="currency-input">
           Moeda:
-          {
-            currencies.map((currencie) => (
+          <select
+            value={ currency }
+            data-testid="currency-input"
+            name="currency"
+            onChange={ this.onInputChange }
+          >
+            {currencies.map((currencie) => (
               <option key={ currencie }>{currencie}</option>
-            ))
-          }
-        </select>
-        <select
-          value={ method }
-          data-testid="method-input"
-          name="method"
-          onChange={ this.onInputChange }
-        >
+            ))}
+          </select>
+        </label>
+        <label htmlFor="method-input">
           Método:
-          <option value="Dinheiro">Dinheiro</option>
-          <option value="Cartão de crédito">Cartão de crédito</option>
-          <option value="Cartão de débito">Cartão de débito</option>
-        </select>
-        <select
-          value={ tag }
-          data-testid="tag-input"
-          name="tag"
-          onChange={ this.onInputChange }
-        >
-          Método:
-          <option value="Alimentação">Alimentação</option>
-          <option value="Lazer">Lazer</option>
-          <option value="Trabalho">Trabalho</option>
-          <option value="Transporte">Transporte</option>
-          <option value="Saúde">Saúde</option>
-        </select>
+          <select
+            value={ method }
+            data-testid="method-input"
+            name="method"
+            onChange={ this.onInputChange }
+          >
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão de crédito">Cartão de crédito</option>
+            <option value="Cartão de débito">Cartão de débito</option>
+          </select>
+        </label>
+        <label htmlFor="tag-input">
+          Categoria:
+          <select
+            value={ tag }
+            data-testid="tag-input"
+            name="tag"
+            onChange={ this.onInputChange }
+          >
+            <option value="Alimentação">Alimentação</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Saúde">Saúde</option>
+          </select>
+        </label>
         <button onClick={ this.submitButton }>Adicionar despesa</button>
       </div>
     );
